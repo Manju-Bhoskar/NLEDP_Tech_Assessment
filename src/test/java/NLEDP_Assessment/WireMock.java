@@ -10,7 +10,6 @@ import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 
 public class WireMock {
-
     // Get URL: https://petstore.swagger.io/v2/pet/findByStatus?status=available
     private WireMockServer wireMockServer;
 
@@ -20,16 +19,11 @@ public class WireMock {
         wireMockServer.start();
         configureFor("localhost", wireMockServer.port());
         stubFor(get(urlMatching("/v2/pet/findByStatus.*"))
-                //.withHeader("accept", equalTo("application/json"))
                 .willReturn(aResponse().withBodyFile("pets.json")));
-
-        System.out.println("---- wiremock server started ----");
-
     }
 
     @After
     public void teardown() {
         wireMockServer.stop();
-        System.out.println("---- wiremock server stopped ----");
     }
 }
