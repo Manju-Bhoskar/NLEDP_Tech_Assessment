@@ -1,7 +1,7 @@
 How to Execute the test
 
 Step 1: Go to the file called RunCucumberTest
-        (Navigation: NLEDP_Tech_Assessment-->src-->test-->java-->NLEDP_Assessment-->RunCucumberTest)
+        (Navigation: NLEDP_Tech_Assessment-->src-->test-->java-->nledp.assessment-->RunCucumberTest)
 Step 2: Select the file and right-click on the file
 Step 3: Select the option "Run RunCucumberTest"
 

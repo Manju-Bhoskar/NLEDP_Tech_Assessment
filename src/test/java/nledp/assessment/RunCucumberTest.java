@@ -1,4 +1,4 @@
-package NLEDP_Assessment;
+package nledp.assessment;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;

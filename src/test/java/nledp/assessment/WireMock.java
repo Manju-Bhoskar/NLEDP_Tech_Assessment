@@ -1,4 +1,4 @@
-package NLEDP_Assessment;
+package nledp.assessment;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer;
@@ -14,7 +14,8 @@ public class WireMock {
     private WireMockServer wireMockServer;
 
     @Before
-    public void setup() throws Exception {
+    public void setup()
+    {
         wireMockServer = new WireMockServer(wireMockConfig().port(8889).extensions(new ResponseTemplateTransformer(true)));
         wireMockServer.start();
         configureFor("localhost", wireMockServer.port());
@@ -23,7 +24,8 @@ public class WireMock {
     }
 
     @After
-    public void teardown() {
+    public void teardown()
+    {
         wireMockServer.stop();
     }
 }

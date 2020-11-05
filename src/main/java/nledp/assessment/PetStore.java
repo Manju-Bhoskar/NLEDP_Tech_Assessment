@@ -1,21 +1,20 @@
-package NLDEP_Assessment;
+package nledp.assessment;
 
 public class PetStore
 {
-     String serviceBaseUrl;
+    String serviceBaseUrl;
     public PetStore(String petstoreType)
     {
         if(petstoreType.equals("real"))
         {
             serviceBaseUrl ="https://petstore.swagger.io/";
-        }else
-            {
+        } else {
             serviceBaseUrl ="http://localhost:8889/";   //wiremock implementation
         }
     }
 
-    public String getURL(){
+    public String getURL()
+    {
         return serviceBaseUrl;
     }
-
 }
